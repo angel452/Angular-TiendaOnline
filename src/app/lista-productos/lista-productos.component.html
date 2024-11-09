@@ -5,10 +5,7 @@
     <!-- Lista de productos -->
     <ul class="space-y-3">
         @for (i of productos; track i) {
-            <li class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
-                <span class="text-lg font-medium text-gray-700">{{ i.description }}</span>
-                <span class="text-xl font-bold text-green-600">$.{{ i.price }}</span>
-            </li>
+            <app-producto [producto]="i"/>
         }
     </ul>
 
