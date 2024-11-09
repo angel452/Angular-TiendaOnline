@@ -1,3 +1,4 @@
+/*
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './producto.component.css'
 })
 export class ProductoComponent {
-  descripcion = 'Nuevo Producto';
-  precio = 100;
+
 }
+
+*/
