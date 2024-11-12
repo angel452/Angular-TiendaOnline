@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Producto } from '../producto/producto.model';
+import { ProductoService } from '../producto.service';
 
 @Component({
   selector: 'app-formulario',
@@ -13,6 +14,8 @@ export class FormularioComponent {
   @ViewChild('descripcionInput') descriptionInput!: ElementRef;
   @ViewChild('precioInput') precioInput!: ElementRef;
   @Output() nuevoProducto = new EventEmitter<Producto>();
+
+  constructor (private productoService : ProductoService) {}
 
   agregarProducto(evento : Event) {
     evento.preventDefault();
@@ -29,8 +32,9 @@ export class FormularioComponent {
     const producto = new Producto(  this.descriptionInput.nativeElement.value,
                                     this.precioInput.nativeElement.value );
 
-    this.nuevoProducto.emit(producto);
-    
+    //this.nuevoProducto.emit(producto);
+    this.productoService.agregarProducto(producto);
+
     // Limpiar campos
     this.descriptionInput.nativeElement.value = '';
     this.precioInput.nativeElement.value = null;
