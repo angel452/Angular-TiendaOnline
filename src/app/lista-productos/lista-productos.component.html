@@ -2,13 +2,17 @@
     <!-- Título de la lista de productos -->
     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Listado de productos</h3>
     
+    <!-- Boton para agreagr un producto -->
+    <div>
+        <button (click)="agregarProducto()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Agregar producto
+        </button>
+    </div>
+
     <!-- Lista de productos -->
     <ul class="space-y-3">
         @for (i of productos; track i) {
             <app-producto [producto]="i"/>
         }
     </ul>
-
-    <!-- Formulario para añadir nuevos productos -->
-    <app-formulario/>
 </div>

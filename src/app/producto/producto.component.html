@@ -1,5 +1,5 @@
 <li class="bg-gray-100 p-4 rounded-lg flex justify-between items-center">
     <span class="text-lg font-medium text-gray-700">{{ producto.description }}</span>
     <span class="text-xl font-bold text-green-600">$.{{ producto.price }}</span>
-    <button class="bg-green-500 text-white px-4 py-2 rounded-lg" (click)="emitirDetalleProducto()">Ver detalle</button>
+    <button class="bg-green-500 text-white px-4 py-2 rounded-lg" (click)="editarProducto(producto.id!)">Editar producto</button>
 </li>
